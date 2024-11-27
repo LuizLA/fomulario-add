@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista</title>
+</head>
+<body>
+    <form class="form-list">
+        <h1>Lista-Alunos</h1>
+        <div class="row item-x">
+            <h4>01</h4>
+            <h4>Jose</h4>
+            <img src="https://images.emojiterra.com/google/android-12l/512px/1f9d1-1f3fb-1f393.png" alt="">
+        </div>
+        <div class="row item-y">
+            <h4>01</h4>
+            <h4>Jose</h4>
+            <img src="https://images.emojiterra.com/google/android-12l/512px/1f9d1-1f3fb-1f393.png" alt="">
+        </div>
+        <div class="row item-x">
+            <h4>01</h4>
+            <h4>Jose</h4>
+            <img src="https://images.emojiterra.com/google/android-12l/512px/1f9d1-1f3fb-1f393.png" alt="">
+        </div>
+
+
+        <button class="btnAdd">+</button>
+    </form>
+
+    <form class="form-add">
+        <h2>Cadastrar novo</h2>
+        <input type="text" placeholder="nome completo">
+        <input type="text" placeholder="nome completo">
+
+        <button>Cadastrar</button>
+
+        <button class="btnClose">X</button>
+    </form>
+
+ <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+
+
+    }
+    .item-x{  background-color: green; }
+    .form-list{
+        position: relative;
+    }
+   
+    form{
+        height: 80vh;
+        width: 350px;
+        margin: auto;
+
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        color: white;
+        padding-top: 50px;
+        position: relative;
+        background-color: #1d1d1d;
+    }
+    .form-add{
+        top: 0;
+        left: 160px;
+        position: absolute
+    }
+    .btnAdd{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        font-size: 40px;
+        background-color: #1d1d1d;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        transition: .3s;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    .btnAdd:hover{
+        transform: scale(1.1);
+       background-color: green;
+
+    }
+    .row{
+        width: 80%;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+
+        border-radius: 5px;
+       
+        justify-content: space-between;
+    }
+    .row img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+    }
+    .btnClose{
+        top: 0;
+        right: -20px;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: none;
+        color: #fff;
+        background-color: red;
+    }
+ </style>
+
+ <script>
+    // controlando o formulario de adicionar e fechar
+    var formAdicionar = document.querySelector('.form-add')
+    var btnFechar = document.querySelector('.btnClose')
+
+    btnFechar.onclick = (event) =>{
+        event.preventDefault()
+        formAdicionar.style.display = 'none'
+    }
+
+    // abrir o formulario de adicionar
+ </script>
+</body>
+</html>
